@@ -10,10 +10,21 @@ document.getElementById('contact-form').addEventListener('submit', e => {
 
 	const formEl = e.target;
 	sendFormData(formEl).then(
-		() => alert('Email sent'),
+		res => {
+			if (!res.ok) {
+				alert(
+					'There was an error while sending the email. Try again after a while!!'
+				);
+				res.text().then(console.error);
+				return;
+			}
+			alert('Email sent');
+		},
 		e => {
 			console.error(e);
-			alert('There was an error while sending the email. Try again!!');
+			alert(
+				'There was an error while sending the email. Try again after a while!!'
+			);
 		}
 	);
 });
