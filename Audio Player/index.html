@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music Player</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1>Music Player</h1>
+	<div class="container">
+		<div class="record-container"></div>
+
+		<div class="audio-container">
+			<h3 class="audio-title">Cool - Jonas Brothers</h3>
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+
+			<audio src="./images/despacito-luis-fonsi.png" id="audio-element"></audio>
+		</div>
+
+		<div class="navigation">
+			<main class="main">
+				<button class="previous-btn" id="prev-btn" title="Previous">
+					<i class="fas fa-step-backward"></i>
+				</button>
+
+				<button class="play-btn" id="play-btn" title="Play/Pause">
+					<i class="fas fa-play"></i>
+				</button>
+
+				<button class="next-btn" id="next-btn" title="Next">
+					<i class="fas fa-step-forward"></i>
+				</button>
+			</main>
+
+			<section class="extra-options">
+				<input type="range" id="volume-range" class="volume-range" min="0" max="2" value="1" step="0.01">
+				<button id="volume-btn" class="volume-btn" title="Volume">
+					<i class="fas fa-volume-up"></i>
+				</button>
+			</section>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.3/jsmediatags.js" type="module"></script>
+	<script src="script.js" type="module"></script>
+
+</body>
+
+</html>

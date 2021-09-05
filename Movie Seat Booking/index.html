@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Seat Booking App</title>
+</head>
+
+<body>
+
+    <div class="movie-container">
+        <label>Pick a movie:</label>
+        <select name="" id="movie">
+            <option value="500">Avengers - Infinity War</option>
+            <option value="300">DeadPool 2</option>
+            <option value="400">A Quiet Place</option>
+            <option value="220">Rampage</option>
+        </select>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+
+        <!-- <div class="row" id="row1">
+            <div class="seat occupied" id="seat1"></div>
+            <div class="seat occupied" id="seat2"></div>
+            <div class="seat" id="seat3"></div>
+            <div class="seat" id="seat4"></div>
+            <div class="seat" id="seat5"></div>
+            <div class="seat occupied" id="seat6"></div>
+            <div class="seat" id="seat7"></div>
+            <div class="seat" id="seat8"></div>
+        </div>
+        <div class="row" id="row2">
+            <div class="seat" id="seat1"></div>
+            <div class="seat" id="seat2"></div>
+            <div class="seat occupied" id="seat3"></div>
+            <div class="seat" id="seat4"></div>
+            <div class="seat" id="seat5"></div>
+            <div class="seat occupied" id="seat6"></div>
+            <div class="seat" id="seat7"></div>
+            <div class="seat" id="seat8"></div>
+        </div>
+        <div class="row" id="row3">
+            <div class="seat occupied" id="seat1"></div>
+            <div class="seat" id="seat2"></div>
+            <div class="seat" id="seat3"></div>
+            <div class="seat" id="seat4"></div>
+            <div class="seat" id="seat5"></div>
+            <div class="seat" id="seat6"></div>
+            <div class="seat" id="seat7"></div>
+            <div class="seat" id="seat8"></div>
+        </div>
+        <div class="row" id="row4">
+            <div class="seat" id="seat1"></div>
+            <div class="seat" id="seat2"></div>
+            <div class="seat" id="seat3"></div>
+            <div class="seat occupied" id="seat4"></div>
+            <div class="seat occupied" id="seat5"></div>
+            <div class="seat" id="seat6"></div>
+            <div class="seat" id="seat7"></div>
+            <div class="seat" id="seat8"></div>
+        </div>
+        <div class="row" id="row5">
+            <div class="seat" id="seat1"></div>
+            <div class="seat occupied" id="seat2"></div>
+            <div class="seat occupied" id="seat3"></div>
+            <div class="seat occupied" id="seat4"></div>
+            <div class="seat occupied" id="seat5"></div>
+            <div class="seat" id="seat6"></div>
+            <div class="seat" id="seat7"></div>
+            <div class="seat" id="seat8"></div>
+        </div>
+        <div class="row" id="row6">
+            <div class="seat" id="seat1"></div>
+            <div class="seat" id="seat2"></div>
+            <div class="seat" id="seat3"></div>
+            <div class="seat" id="seat4"></div>
+            <div class="seat" id="seat5"></div>
+            <div class="seat occupied" id="seat6"></div>
+            <div class="seat" id="seat7"></div>
+            <div class="seat occupied" id="seat8"></div>
+        </div> -->
+
+        <div class="row">
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+        </div>
+    </div>
+
+    <p class="text">You have selected <span id="count">0</span> seats for a price of ₹<span id="total">0</span></p>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    max-width: 100%;
+    width: 800px;
+    margin: 0 auto;
+}
+
+aside {
+    width: 300px;
+    padding: 10px;
+    border-right: 1px solid #111;
+}
+
+button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+main {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 300;
+    border-bottom: 1px solid #111;
+}
+
+h3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 300;
+    border-bottom: 1px solid #111;
+    background-color: #ffffff;
+    margin: 20px 0 0;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 0 10px 0 7px;
+}
+
+.clearLogo {
+    color: #c80000;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Exchange Rate App</title>
+</head>
+
+<body>
+
+	<img src="img/money-purple.png" alt="" class="money-img">
+	<!-- <img src="img/money-green.png" alt="" class="money-img"> -->
+	<h1>Exchange Rate Calculator</h1>
+
+	<p class="text">Choose the currency and the amounts to get the exchange rate</p>
+
+	<div class="container">
+		<div class="currency">
+			<select name="currency-list-1" id="currency-list-1" class="currency-list">
+
+			</select>
+			<input type="number" id="amount-1" class="amount" min="0" placeholder="0">
+		</div>
+
+		<div class="swap-rate-container">
+			<button class="btn" id="swap">
+				Swap
+			</button>
+			<div class="rate" id="rate">1USD = 1.0000USD</div>
+		</div>
+
+		<div class="currency">
+			<select name="currency-list-2" id="currency-list-2" class="currency-list">
+
+			</select>
+			<input type="number" id="amount-2" class="amount" min="0" placeholder="0">
+		</div>
+	</div>
+
+	<script src="populateSelect.js"></script>
+	<script src="script.js"></script>
+
+</body>
+
+</html>

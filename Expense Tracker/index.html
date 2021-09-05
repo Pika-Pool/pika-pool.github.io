@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1>Expense Tracker</h1>
+
+	<div class="container">
+		<div class="balance-container">
+			<h4>Your Balance</h4>
+			<h2 class="balance money" id="balance"></h2>
+		</div>
+
+		<div class="income-expense-container">
+			<div class="income">
+				<h4>Income</h4>
+				<div id="income" class="money plus"></div>
+			</div>
+			<div class="expense">
+				<h4>Expense</h4>
+				<div id="expense" class="money minus"></div>
+			</div>
+		</div>
+
+		<h3>History</h3>
+		<ul class="history" id="history"></ul>
+
+		<h3>Add new transaction</h3>
+		<form id="form" class="new-transaction">
+			<div class="input-box">
+				<label for="text">Text</label>
+				<input type="text" id="text" placeholder="Enter description..." required>
+			</div>
+
+			<div class="input-box">
+				<label for="">Amount<br>(+ve = income; -ve = expense)</label>
+				<input type="number" id="amount" placeholder="Enter Amount" required>
+			</div>
+
+			<button type="submit" id="newBtn">Add Transaction</button>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>

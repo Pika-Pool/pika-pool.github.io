@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary-color: #8a5ce2;
+	/* --primary-color: #5fbaa7; */
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: sans-serif;
+}
+
+.money-img {
+	width: 150px;
+	margin: 20px;
+}
+
+h1 {
+	color: var(--primary-color);
+	margin-bottom: 35px;
+	font-size: 2.3rem;
+}
+
+p {
+	text-align: center;
+}
+
+.text {
+	font-size: 1.1rem;
+	margin-bottom: 50px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 400px;
+	margin-bottom: 7%;
+	overflow: hidden;
+}
+
+.container .currency {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.currency .currency-list {
+	display: block;
+	width: 30%;
+	padding: 10px;
+	font-size: 0.9rem;
+	outline: none;
+	border: 2px solid var(--primary-color);
+	border-radius: 5px;
+	-moz-appearance: none;
+	/* -webkit-appearance: none; */
+	appearance: none;
+}
+
+.currency .amount {
+	position: relative;
+	width: 65%;
+	text-align: right;
+	font-size: 1.3rem;
+	border: none;
+	border: 2px solid #3333336e;
+	border-radius: 5px;
+	padding-right: 10px;
+	outline: none;
+}
+
+.currency .amount::before {
+	content: attr(data-symbol);
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 30px;
+	height: 100%;
+
+	border-right: 1px solid #3333336e;
+}
+
+.currency .amount:focus {
+	border: 2px solid #333333ff;
+}
+
+.swap-rate-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.btn {
+	background-color: var(--primary-color);
+	border: solid 2px var(--primary-color);
+	padding: 6px 20px;
+	margin-left: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 0.85rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:hover {
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.swap-rate-container .rate {
+	margin-right: 10px;
+	color: var(--primary-color);
+	font-weight: bold;
+	font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+	.container {
+		width: 300px;
+	}
+}

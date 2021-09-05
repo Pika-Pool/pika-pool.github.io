@@ -1,0 +1,226 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	position: relative;
+	background-color: #34495e;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	max-height: 100vh;
+	font-size: 110%;
+	overflow: hidden;
+}
+
+h1 {
+	margin: 1.5rem 1rem;
+	letter-spacing: 1px;
+}
+
+/**************************************/
+/* DIFFICULTY LEVEL */
+/**************************************/
+.difficulty {
+	position: relative;
+	margin: 1rem auto .5rem;
+	padding: .5rem .8rem;
+	cursor: pointer;
+	/* border: 1px solid #2980b9; */
+	border-radius: 15px;
+}
+
+.difficulty button {
+	width: 45%;
+	font-size: 1.3rem;
+	padding: .5rem .8rem;
+	margin: 0;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	cursor: inherit;
+	pointer-events: none;
+}
+
+.difficulty::before {
+	content: '';
+	position: absolute;
+    top: 0;
+    left: 0;
+	z-index: -1;
+	height: 100%;
+    width: 50%;
+    border-radius: 15px;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.difficulty.easy::before {
+	transform: translateX(0%);
+	animation: difficultyEasy .7s ease-in-out;
+}
+
+@keyframes difficultyEasy {
+    0% {
+        transform: translateX(100%);
+    }
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.difficulty.hard::before {
+	transform: translateX(100%);
+	animation: difficultyHard .7s ease;
+}
+
+@keyframes difficultyHard {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/**************************************/
+/* GAME */
+/**************************************/
+.game {
+	position: relative;
+	/* border: 1px solid white; */
+	width: 500px;
+	height: 500px;
+	padding: 2rem 0rem;
+	margin: 3rem auto;
+}
+
+/**************************************/
+/* SVG */
+/**************************************/
+.game .figure {
+	fill: transparent;
+	stroke: white;
+	stroke-width: 4px;
+	stroke-linecap: round;
+}
+
+.figure .man {
+	display: none;
+}
+
+.figure .man.show {
+	display: block;
+}
+
+/**************************************/
+/* WRONG LETTERS */
+/**************************************/
+.game .wrong {
+	position: absolute;
+	top: 20px;
+	right: 2rem;
+	max-width: 150px;
+	overflow: hidden;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	text-align: right;
+}
+
+.game .wrong-letters {
+	font-size: 1.2rem;
+}
+
+/**************************************/
+/* HIDDEN WORD */
+/**************************************/
+.hidden-word {
+	list-style: none;
+	display: flex;
+	position: absolute;
+	left: 50%;
+	bottom: 20%;
+	transform: translateX(-50%);
+}
+
+.hidden-word .hidden-letter {
+	position: relative;
+	margin: 0.8rem;
+	font-size: 2.15rem;
+	width: 30px;
+	text-align: center;
+}
+
+.hidden-letter::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: -5%;
+	width: 110%;
+	height: 4px;
+	background-color: #2980b9;
+}
+
+/**************************************/
+/* POPUP */
+/**************************************/
+.popup-container {
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.popup-container.show {
+	display: flex;
+}
+
+.popup {
+	width: 500px;
+	height: 300px;
+	background: #2980b9;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.popup .msg {
+	font-size: 2.2rem;
+	margin: 4rem 0 2rem;
+}
+
+.popup .restart {
+	padding: .7rem 1.1rem;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	border: 2px solid #34495e;
+	cursor: pointer;
+}
+
+/************************************/
+/* SLIDER */
+/************************************/
+.slideup {
+	/* display: none; */
+	position: absolute;
+	bottom: -4rem;
+	font-size: 1rem;
+	letter-spacing: 1.15px;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: .8rem .8rem 2rem;
+	border-radius: 10px;
+	transition: .5s bottom ease;
+}
+
+.slideup.show {
+	bottom: -1rem;
+}
